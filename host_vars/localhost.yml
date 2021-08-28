@@ -1,0 +1,11 @@
+---
+users:
+  - username: test-zsh-user
+    shell: /bin/zsh
+    zshrc:
+      template: zshrc-nekeal.zsh.j2
+    aliases:
+      template: aliases-nekeal.zsh
+    zsh_config_templates:
+      - src: p10k-nekeal.zsh.j2
+        dest: .p10k.zsh

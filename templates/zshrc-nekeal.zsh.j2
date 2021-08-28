@@ -1,0 +1,11 @@
+{% extends "zshrc-default.zsh.j2" %}
+
+{% block config_files %}
+
+COMPLETION_WAITING_DOTS=true
+{{ super() }}
+
+{% endblock %}
+
+{% block extra_bottom %}
+{% endblock %}
