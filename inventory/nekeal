@@ -1,0 +1,3 @@
+[nekeal]
+nekeal_work ansible_connection=local ansible_host=nekeal_work
+nekeal_home ansible_connection=local ansible_host=nekeal_home

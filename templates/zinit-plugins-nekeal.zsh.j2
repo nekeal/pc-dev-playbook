@@ -1,0 +1,7 @@
+{% extends "zinit-plugins-default.zsh.j2" %}
+
+{% block zinit_plugins %}
+
+{{ super() }}
+zinit ice pick="virtualenvwrapper_lazy.sh"; zinit load bernardobarreto/virtualenvwrapper
+{% endblock %}

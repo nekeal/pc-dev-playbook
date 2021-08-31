@@ -1,5 +1,5 @@
 ---
 - name: "Configure developer's PC"
-  hosts: localhost
+  hosts: all
   roles:
     - nekeal.zsh

@@ -1,0 +1,18 @@
+---
+users:
+  - username: "{{ _username }}"
+    shell: /bin/zsh
+    groups:
+      - sudo
+    zinit_plugins_template: zinit-plugins-nekeal.zsh.j2
+    zshrc:
+      template: zshrc-nekeal.zsh.j2
+    aliases:
+      template: aliases-nekeal.zsh
+    zsh_config_templates:
+      - src: p10k-nekeal.zsh.j2
+        dest: .p10k.zsh
+    env_vars:
+      VIRTUALENVWRAPPER_PYTHON: /usr/bin/python3
+      PROJECT_HOME: "/home/{{ _username }}/PycharmProjects"
+      DOCKER_BUILDKIT: "1"
