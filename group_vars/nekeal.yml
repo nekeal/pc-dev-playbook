@@ -1,4 +1,8 @@
 ---
+_zsh_base_config_templates:
+  - src: p10k-nekeal.zsh.j2
+    dest: .p10k.zsh
+
 users:
   - username: "{{ _username }}"
     shell: /bin/zsh
@@ -9,9 +13,7 @@ users:
       template: zshrc-nekeal.zsh.j2
     aliases:
       template: aliases-nekeal.zsh
-    zsh_config_templates:
-      - src: p10k-nekeal.zsh.j2
-        dest: .p10k.zsh
+    zsh_config_templates: "{{ _zsh_base_config_templates + _zsh_extra_config_templates }}"
     env_vars:
       VIRTUALENVWRAPPER_PYTHON: /usr/bin/python3
       PROJECT_HOME: "/home/{{ _username }}/PycharmProjects"
