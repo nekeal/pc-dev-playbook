@@ -1,2 +1,3 @@
 ---
 # default vars to apply to all hosts
+_zsh_extra_config_templates: []
