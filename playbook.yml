@@ -3,3 +3,4 @@
   hosts: all
   roles:
     - nekeal.zsh
+    - nekeal.postgresql_db

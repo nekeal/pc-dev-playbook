@@ -10,3 +10,5 @@ _extra_aliases:
   ghpr: gh pr
   ghprc: ghpr create
   gmru: ghpr update
+
+postgresql_major_version: 11

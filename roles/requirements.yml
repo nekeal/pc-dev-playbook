@@ -1,1 +1,3 @@
-- nekeal.zsh
+roles:
+  - nekeal.zsh
+  - weareinteractive.apt

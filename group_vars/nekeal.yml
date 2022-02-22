@@ -18,3 +18,5 @@ users:
       VIRTUALENVWRAPPER_PYTHON: /usr/bin/python3
       PROJECT_HOME: "/home/{{ _username }}/PycharmProjects"
       DOCKER_BUILDKIT: "1"
+
+postgresql_apt_repository: "deb http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main"
