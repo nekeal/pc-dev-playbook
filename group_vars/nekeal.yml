@@ -18,5 +18,8 @@ users:
       VIRTUALENVWRAPPER_PYTHON: /usr/bin/python3
       PROJECT_HOME: "/home/{{ _username }}/PycharmProjects"
       DOCKER_BUILDKIT: "1"
+      COMPLETION_WAITING_DOTS: "true"
+      NVM_AUTO_USE: "true" # used by nvm plugin
+
 
 postgresql_apt_repository: "deb http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main"
