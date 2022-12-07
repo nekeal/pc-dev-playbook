@@ -20,6 +20,7 @@ users:
       DOCKER_BUILDKIT: "1"
       COMPLETION_WAITING_DOTS: "true"
       NVM_AUTO_USE: "true" # used by nvm plugin
-
+      skip_global_compinit: "true"
 
 postgresql_apt_repository: "deb http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main"
+_extra_aliases: {}
