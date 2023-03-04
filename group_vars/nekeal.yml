@@ -8,6 +8,8 @@ users:
     shell: /bin/zsh
     groups:
       - sudo
+      - vboxusers 
+      - docker
     zinit_plugins_template: zinit-plugins-nekeal.zsh.j2
     zshrc:
       template: zshrc-nekeal.zsh.j2
@@ -24,3 +26,7 @@ users:
 
 postgresql_apt_repository: "deb http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main"
 _extra_aliases: {}
+
+git_version: "2.39.2"
+git_install_from_source: true
+git_install_from_source_force_update: true
