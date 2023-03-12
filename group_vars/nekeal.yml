@@ -24,9 +24,27 @@ users:
       NVM_AUTO_USE: "true" # used by nvm plugin
       skip_global_compinit: "true"
 
-postgresql_apt_repository: "deb http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main"
 _extra_aliases: {}
 
 git_version: "2.39.2"
 git_install_from_source: true
 git_install_from_source_force_update: true
+
+apt_install_recommends: yes # whether or not to install the "recommended" packages by default
+apt_default_packages:
+  - unattended-upgrades
+# Python build dependencies
+  - build-essential
+  - libssl-dev
+  - zlib1g-dev
+  - libbz2-dev
+  - libreadline-dev
+  - libsqlite3-dev
+  - curl
+  - libncursesw5-dev
+  - xz-utils
+  - tk-dev
+  - libxml2-dev
+  - libxmlsec1-dev
+  - libffi-dev
+  - liblzma-dev

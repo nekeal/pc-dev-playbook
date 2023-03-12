@@ -3,5 +3,11 @@
   hosts: all
   become: yes
   roles:
-    - nekeal.zsh
     - nekeal.postgresql_db
+    - name: geerlingguy.git
+      tags:
+        - git
+    - nekeal.zsh
+    - name: anxs.apt
+      tags:
+        - apt

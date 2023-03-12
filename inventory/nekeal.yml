@@ -9,3 +9,7 @@ nekeal:
       ansible_connection: local
       ansible_host: nekeal_home
       ansible_python_interpreter: /usr/bin/python3
+    nekeal_home2:
+      ansible_connection: local
+      ansible_host: nekeal_home2
+      ansible_python_interpreter: /usr/bin/python3
