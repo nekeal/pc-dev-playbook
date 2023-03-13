@@ -3,3 +3,5 @@ roles:
   - anxs.apt
   - geerlingguy.git
   - gantsign.visual-studio-code
+  - name: darkwizard242.ansible-role-googlechrome
+    src: https://github.com/darkwizard242/ansible-role-googlechrome

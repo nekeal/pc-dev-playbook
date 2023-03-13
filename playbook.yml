@@ -14,3 +14,6 @@
     - name: gantsign.visual-studio-code
       tags:
         - vscode
+    - name: darkwizard242.ansible-role-googlechrome
+      tags:
+        - chrome
