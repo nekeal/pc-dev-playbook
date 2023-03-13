@@ -11,3 +11,6 @@
     - name: anxs.apt
       tags:
         - apt
+    - name: gantsign.visual-studio-code
+      tags:
+        - vscode

@@ -2,3 +2,4 @@ roles:
   - nekeal.zsh
   - anxs.apt
   - geerlingguy.git
+  - gantsign.visual-studio-code
