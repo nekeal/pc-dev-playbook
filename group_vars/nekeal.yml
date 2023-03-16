@@ -1,4 +1,7 @@
 ---
+ansible_custom_distribution: "ubuntu"
+linux_codename: "jammy"
+
 _zsh_base_config_templates:
   - src: p10k-nekeal.zsh.j2
     dest: .p10k.zsh
@@ -48,3 +51,7 @@ apt_default_packages:
   - libxmlsec1-dev
   - libffi-dev
   - liblzma-dev
+
+docker_install_compose_plugin: true
+docker_install_compose: false
+docker_apt_gpg_key: "{{ docker_repo_url }}/ubuntu/gpg"
