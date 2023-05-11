@@ -1,8 +1,13 @@
 roles:
   - nekeal.zsh
+  - nekeal.postgresql_db
   - anxs.apt
   - geerlingguy.git
   - gantsign.visual-studio-code
   - name: darkwizard242.ansible-role-googlechrome
     src: https://github.com/darkwizard242/ansible-role-googlechrome
   - geerlingguy.docker
+  - staticdev.brave
+  - oefenweb.apt
+  - name: trombik.apt_repo
+    src: https://github.com/trombik/ansible-role-apt_repo

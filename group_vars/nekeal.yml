@@ -5,7 +5,9 @@ linux_codename: "jammy"
 _zsh_base_config_templates:
   - src: p10k-nekeal.zsh.j2
     dest: .p10k.zsh
-
+users_groups:
+  - vboxusers
+  - docker
 users:
   - username: "{{ _username }}"
     shell: /bin/zsh
@@ -33,8 +35,16 @@ git_version: "2.39.2"
 git_install_from_source: true
 git_install_from_source_force_update: true
 
-apt_install_recommends: yes # whether or not to install the "recommended" packages by default
-apt_default_packages:
+
+apt_repo_keys_to_add:
+  - https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg
+  - https://packages.cloud.google.com/apt/doc/apt-key.gpg
+apt_repo_to_add:
+  - deb http://repository.spotify.com stable non-free
+  - deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main
+apt_upgrade: no
+apt_install:
+# system
   - unattended-upgrades
 # Python build dependencies
   - build-essential
@@ -51,6 +61,19 @@ apt_default_packages:
   - libxmlsec1-dev
   - libffi-dev
   - liblzma-dev
+# postgresql dependency
+  - libpq-dev
+# media
+  - spotify-client
+# tools
+  - nmap
+  - htop
+  - tree
+  - jq
+  - tmux
+  - xclip
+  - imagemagick
+  - google-cloud-cli
 
 docker_install_compose_plugin: true
 docker_install_compose: false

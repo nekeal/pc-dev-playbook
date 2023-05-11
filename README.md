@@ -16,7 +16,7 @@ Currently the playbook uses only [nekeal.zsh](https://github.com/nekeal/ansible-
 
 3. Replace `username` in `host_vars/localhost.yml` to your local user (If you don't do that new user will be created with default configuration. Then you can login to his account and check config before applying it to your user.)
 
-4. Install necessary roles: `ansible-galaxy role install -r roles/requirements.yml`
+4. Install necessary roles: `ansible-galaxy role install -r roles/requirements.yml --roles-path roles`
 
 5. Run playbook:
 

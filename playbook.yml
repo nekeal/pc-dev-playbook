@@ -18,7 +18,11 @@
       tags:
         - docker
     - nekeal.zsh
-    - name: anxs.apt
+    - name: trombik.apt_repo
+      tags:
+        - apt
+        - apt_repo
+    - name: oefenweb.apt
       tags:
         - apt
     - name: gantsign.visual-studio-code
@@ -27,3 +31,6 @@
     - name: darkwizard242.ansible-role-googlechrome
       tags:
         - chrome
+    - name: staticdev.brave
+      tags:
+        - brave

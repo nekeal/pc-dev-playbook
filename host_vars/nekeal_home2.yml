@@ -1,4 +1,5 @@
 ---
+ansible_custom_distribution: Ubuntu
 _username: !vault |
           $ANSIBLE_VAULT;1.1;AES256
           35646464393131623339613763653034613838386665666237633034316331313965303565636566
@@ -8,5 +9,3 @@ _username: !vault |
           3734
 
 postgresql_major_version: 14
-
-apt_install_recommends: no
