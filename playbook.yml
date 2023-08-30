@@ -2,6 +2,35 @@
 - name: "Configure developer's PC"
   hosts: all
   become: yes
+  pre_tasks:
+    - name: Set ansible distribution
+      ansible.builtin.set_fact:
+        ansible_distribution: "{{ ansible_custom_distribution }}"
+        ansible_distribution_release: "{{ linux_codename }}"
+      tags:
+        - always
   roles:
-    - nekeal.zsh
     - nekeal.postgresql_db
+    - name: geerlingguy.git
+      tags:
+        - git
+    - name: geerlingguy.docker
+      tags:
+        - docker
+    - nekeal.zsh
+    - name: trombik.apt_repo
+      tags:
+        - apt
+        - apt_repo
+    - name: anxs.apt
+      tags:
+        - apt
+    - name: gantsign.visual-studio-code
+      tags:
+        - vscode
+    - name: darkwizard242.ansible-role-googlechrome
+      tags:
+        - chrome
+    - name: staticdev.brave
+      tags:
+        - brave

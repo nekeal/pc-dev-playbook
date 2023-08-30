@@ -1,13 +1,21 @@
 ---
+ansible_custom_distribution: "ubuntu"
+linux_codename: "jammy"
+locale_timezone: "Europe/Warsaw"
+
 _zsh_base_config_templates:
   - src: p10k-nekeal.zsh.j2
     dest: .p10k.zsh
-
+users_groups:
+  - vboxusers
+  - docker
 users:
   - username: "{{ _username }}"
     shell: /bin/zsh
     groups:
       - sudo
+      - vboxusers 
+      - docker
     zinit_plugins_template: zinit-plugins-nekeal.zsh.j2
     zshrc:
       template: zshrc-nekeal.zsh.j2
@@ -22,5 +30,59 @@ users:
       NVM_AUTO_USE: "true" # used by nvm plugin
       skip_global_compinit: "true"
 
-postgresql_apt_repository: "deb http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main"
 _extra_aliases: {}
+
+git_version: "2.39.2"
+git_install_from_source: true
+git_install_from_source_force_update: true
+
+
+apt_repo_keys_to_add:
+  - https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg
+  - https://packages.cloud.google.com/apt/doc/apt-key.gpg
+apt_repo_to_add:
+  - deb http://repository.spotify.com stable non-free
+  - deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main
+apt_upgrade: no
+apt_packages_list:
+# system
+  - unattended-upgrades
+# Python build dependencies
+  - build-essential
+  - libssl-dev
+  - zlib1g-dev
+  - libbz2-dev
+  - libreadline-dev
+  - libsqlite3-dev
+  - curl
+  - libncursesw5-dev
+  - xz-utils
+  - tk-dev
+  - libxml2-dev
+  - libxmlsec1-dev
+  - libffi-dev
+  - liblzma-dev
+# postgresql dependency
+  - libpq-dev
+# media
+  - spotify-client
+# tools
+  - nmap
+  - htop
+  - tree
+  - jq
+  - tmux
+  - xclip
+  - imagemagick
+  - google-cloud-cli
+  - virtualbox-qt
+
+docker_install_compose_plugin: true
+docker_install_compose: false
+docker_apt_gpg_key: "{{ docker_repo_url }}/ubuntu/gpg"
+docker_packages:
+  - "docker-{{ docker_edition }}"
+  - "docker-{{ docker_edition }}-cli"
+  - "docker-{{ docker_edition }}-rootless-extras"
+  - "containerd.io"
+  - docker-buildx-plugin

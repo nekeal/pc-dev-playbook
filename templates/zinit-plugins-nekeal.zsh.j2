@@ -4,5 +4,5 @@
 
 {{ super() }}
 zinit load agkozak/zsh-z
-zinit ice pick="virtualenvwrapper_lazy.sh"; zinit load bernardobarreto/virtualenvwrapper
+zinit ice atclone="pip3 install ." atpull="%atclone" pick="virtualenvwrapper_lazy.sh" ver="4.8.4"; zinit load python-virtualenvwrapper/virtualenvwrapper
 {% endblock %}
