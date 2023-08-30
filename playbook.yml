@@ -22,7 +22,7 @@
       tags:
         - apt
         - apt_repo
-    - name: oefenweb.apt
+    - name: anxs.apt
       tags:
         - apt
     - name: gantsign.visual-studio-code

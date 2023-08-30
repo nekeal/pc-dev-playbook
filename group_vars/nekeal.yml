@@ -1,6 +1,7 @@
 ---
 ansible_custom_distribution: "ubuntu"
 linux_codename: "jammy"
+locale_timezone: "Europe/Warsaw"
 
 _zsh_base_config_templates:
   - src: p10k-nekeal.zsh.j2
@@ -43,7 +44,7 @@ apt_repo_to_add:
   - deb http://repository.spotify.com stable non-free
   - deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main
 apt_upgrade: no
-apt_install:
+apt_packages_list:
 # system
   - unattended-upgrades
 # Python build dependencies
@@ -74,7 +75,14 @@ apt_install:
   - xclip
   - imagemagick
   - google-cloud-cli
+  - virtualbox-qt
 
 docker_install_compose_plugin: true
 docker_install_compose: false
 docker_apt_gpg_key: "{{ docker_repo_url }}/ubuntu/gpg"
+docker_packages:
+  - "docker-{{ docker_edition }}"
+  - "docker-{{ docker_edition }}-cli"
+  - "docker-{{ docker_edition }}-rootless-extras"
+  - "containerd.io"
+  - docker-buildx-plugin

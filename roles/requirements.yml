@@ -1,7 +1,9 @@
 roles:
   - nekeal.zsh
   - nekeal.postgresql_db
-  - anxs.apt
+  - name: anxs.apt
+    src: https://github.com/ANXS/apt/
+    version: master
   - geerlingguy.git
   - gantsign.visual-studio-code
   - name: darkwizard242.ansible-role-googlechrome
